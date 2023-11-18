@@ -519,14 +519,16 @@ func (ConfigQemu) mapToStruct(params map[string]interface{}) (*ConfigQemu, error
 	if _, isSet := params["memory"]; isSet {
 		switch params["memory"].(type) {
 		case float64:
-			config.Memory = params["memory"].(float64)
+			// Convert float64 to int before assignment
+			config.Memory = int(params["memory"].(float64))
 		case string:
 			memory2, err := strconv.ParseFloat(params["memory"].(string), 64)
 			if err != nil {
 				log.Fatal(err)
 				return nil, err
 			} else {
-				config.Memory = memory2
+				// Convert float64 to int before assignment
+				config.Memory = int(memory2)
 			}
 		}
 	}
