@@ -7,7 +7,7 @@ import (
 	"os"
 	"regexp"
 
-	"github.com/Telmate/proxmox-api-go/proxmox"
+	"github.com/loeken/proxmox-api-go/proxmox"
 	"github.com/spf13/cobra"
 )
 

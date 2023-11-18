@@ -12,9 +12,9 @@ import (
 	"sort"
 	"strconv"
 
-	"github.com/Telmate/proxmox-api-go/cli"
-	_ "github.com/Telmate/proxmox-api-go/cli/command/commands"
-	"github.com/Telmate/proxmox-api-go/proxmox"
+	"github.com/loeken/proxmox-api-go/cli"
+	_ "github.com/loeken/proxmox-api-go/cli/command/commands"
+	"github.com/loeken/proxmox-api-go/proxmox"
 )
 
 func main() {
